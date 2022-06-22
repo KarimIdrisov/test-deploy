@@ -26,7 +26,6 @@ app.use(bodyParser.json());
 
 user_routes(app);
 task_routes(app);
-status_routes(app);
 
 app.use(`/.netlify/functions/api`, router);
 
