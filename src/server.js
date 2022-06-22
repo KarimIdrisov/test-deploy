@@ -5,6 +5,7 @@ import task_routes from "./routes/task.route.js";
 
 const app = express();
 const port = process.env.PORT || 3500;
+const router = express.Router();
 
 // Настройка CORS
 app.use(function (req, res, next) {
@@ -25,6 +26,7 @@ app.use(bodyParser.json());
 
 user_routes(app);
 task_routes(app);
+status_routes(app);
 
 app.use(`/.netlify/functions/api`, router);
 
